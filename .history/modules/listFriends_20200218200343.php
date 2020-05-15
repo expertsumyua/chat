@@ -31,12 +31,12 @@
 				if($number_of_friends > 0) {
 					?>
 					<!-- <a href ="http://chat.local/delete_friend.php?user_id=<?php //echo $user["id"]; ?>">Удалить из друзей -</a> -->
-					<div data-link ="http://chat/delete_friend.php?user_id=<?php echo $user["id"]; ?>"onclick ="deleteFriend(this)">Удалить из друзей -</div>
+					<div data-link ="http://chat.local/delete_friend.php?user_id=<?php echo $user["id"]; ?>"onclick ="deleteFriend(this)">Удалить из друзей -</div>
 					<?php
 				} else {
 					?>
 					<!-- <a href ="http://chat.local/add_friend.php?user_id=<?php //echo $user["id"]; ?>">Добавить в друзья +</a> -->
-					<div data-link ="http://chat/add_friend.php?user_id=<?php echo $user["id"]; ?>"onclick ="addFriend(this)">Добавить в друзья +</div>
+					<div data-link ="http://chat.local/add_friend.php?user_id=<?php echo $user["id"]; ?>"onclick ="addFriend(this)">Добавить в друзья +</div>
 					<?php
 				}
 			?>												

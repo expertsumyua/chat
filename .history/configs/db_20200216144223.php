@@ -2,7 +2,7 @@
 // данные для подключения к базе данных
 $server = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $dbName = "chat";
 //$userID = "";
 // Подключение к базе данных chat

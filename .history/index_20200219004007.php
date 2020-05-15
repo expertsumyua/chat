@@ -23,7 +23,7 @@ if($userID == null) {
 
 		<div id = "contacts">
 
-			<form id = "search" action="http://chat/searchFriend.php" method="POST">
+			<form id = "search" action="http://chat.local/searchFriend.php" method="POST">
 				<input type="text" name="search-text">
 				<button type="submit"><img src="img/search-button.png"></button>
 			</form>
@@ -52,7 +52,7 @@ if($userID == null) {
 					$userID_fromWhom = $_COOKIE["userID"];
 					?>
 					<!-- <form id = "form" action="index.php?user=<?php //echo $_GET["user"] ?>" method="POST"> -->
-					<form id = "form" action="http://chat/sendMessage.php" method="POST">						
+					<form id = "form" action="http://chat.local/sendMessage.php" method="POST">						
 						<input type="hidden" name="userID_fromWhom" value="<?php echo $userID_fromWhom; ?>">
 						<input type="hidden" name="userID_toWhom" value="<?php echo $userID_toWhom; ?>">
 						<textarea name="message"></textarea>

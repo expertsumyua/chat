@@ -42,36 +42,33 @@ function deleteFriend(element) {
 
 var form = document.querySelector("#form");
 //console.dir(form);
-if (form) {
-	form.onsubmit = function (event) {
-		event.preventDefault();
+form.onsubmit = function (event) {
+	event.preventDefault();
 
-		var fromWhom = form.querySelector("input[name='userID_fromWhom']");
-		var toWhom = form.querySelector("input[name='userID_toWhom']");
-		var message = form.querySelector("textarea");
-		console.dir(message);
+	var fromWhom = form.querySelector("input[name='userID_fromWhom']");
+	var toWhom = form.querySelector("input[name='userID_toWhom']");
+	var message = form.querySelector("textarea");
+	console.dir(message);
 
-		var data = "send-message=1" +
-			"&userID_fromWhom=" + fromWhom.value +
-			"&userID_toWhom=" + toWhom.value +
-			"&message=" + message.value;
+	var data = "send-message=1" +
+		"&userID_fromWhom=" + fromWhom.value +
+		"&userID_toWhom=" + toWhom.value +
+		"&message=" + message.value;
 
-		// Создать объект для отправки http запроса
-		var ajax3 = new XMLHttpRequest();
-		// Открываем ссылку, передавая метод запоса и саму ссылку
-		ajax3.open("POST", form.action, false);
-		// Отправляем запрос
-		ajax3.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-		// Отправляем запрос
-		ajax3.send(data);
-		console.dir(ajax3);
+	// Создать объект для отправки http запроса
+	var ajax = new XMLHttpRequest();
+	// Открываем ссылку, передавая метод запоса и саму ссылку
+	ajax.open("POST", form.action, false);
+	// Отправляем запрос
+	ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	// Отправляем запрос
+	ajax.send(data);
+	console.dir(ajax);
 
-		var listMessages = document.querySelector("#list-messages");
-		listMessages.innerHTML = ajax3.response;
-		message.value = null;
-	}
+	var listMessages = document.querySelector("#list-messages");
+	listMessages.innerHTML = ajax.response;
+	message.value = null;
 }
-
 
 var formSearch = document.querySelector("#search");
 //console.dir(form);
